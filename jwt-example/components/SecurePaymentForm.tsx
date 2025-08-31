@@ -52,7 +52,7 @@ export default function SecurePaymentForm({
   amount,
   showReceipt = true,
   onSuccess,
-}: SecurePaymentFormProps) {
+}: SecurePaymentFormProps): React.ReactElement {
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
   const [isFormInitialized, setIsFormInitialized] = useState(false);
 
@@ -67,7 +67,8 @@ export default function SecurePaymentForm({
 
       // Set destination ID if configured
       if (process.env.NEXT_PUBLIC_VIO_DESTINATION_ID) {
-        window.valueio_destination_id = process.env.NEXT_PUBLIC_VIO_DESTINATION_ID;
+        window.valueio_destination_id =
+          process.env.NEXT_PUBLIC_VIO_DESTINATION_ID;
       }
 
       // Optional settings
@@ -99,7 +100,6 @@ export default function SecurePaymentForm({
 
       // Success callback
       window.valueio_on_success = () => {
-        console.log('Payment successful!');
         if (onSuccess) {
           onSuccess();
         } else {
@@ -154,10 +154,6 @@ export default function SecurePaymentForm({
         strategy="afterInteractive"
         onLoad={() => {
           setIsScriptLoaded(true);
-          console.log(
-            'Value.js loaded successfully from:',
-            `${process.env.NEXT_PUBLIC_VIO_API_URL}assets/value.js`
-          );
         }}
       />
 

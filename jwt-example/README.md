@@ -28,10 +28,6 @@ NEXT_PUBLIC_VIO_DESTINATION_ID=your-destination-id
 VIO_ADMIN_KEY=your-admin-key
 VIO_WRITE_ONLY_TOKEN=your-write-only-token
 VIO_ACCOUNT=your-account
-
-# JWT Configuration
-JWT_SECRET=your-jwt-secret
-JWT_DURATION=86400
 ```
 
 3. Run the development server:
@@ -83,9 +79,6 @@ app/
 
 components/
 └── SecurePaymentForm.tsx # Payment form component
-
-lib/
-└── jwt.ts               # JWT utility functions
 ```
 
 ## Security Notes

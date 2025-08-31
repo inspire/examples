@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import SecurePaymentForm from '@/components/SecurePaymentForm';
 
-export default function Home() {
+export default function Home(): React.ReactElement {
   const [jwt, setJwt] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -13,7 +13,7 @@ export default function Home() {
     process.env.NEXT_PUBLIC_VIO_WRITE_ONLY_TOKEN ||
     '7ef669f4-a2c1-4004-ab37-7f3069af482d';
 
-  const generateJWT = async () => {
+  const generateJWT = async (): Promise<void> => {
     setIsLoading(true);
     setError(null);
 
@@ -35,20 +35,10 @@ export default function Home() {
         throw new Error(data.error || 'Failed to generate JWT');
       }
 
-      console.log('JWT Response:', data); // Debug log
-
       if (data.data?.jwt) {
         setJwt(data.data.jwt.token);
-        console.log(
-          'JWT expires at:',
-          new Date(data.data.jwt.expires_at * 1000).toLocaleString()
-        );
       } else if (data.jwt) {
         setJwt(data.jwt.token);
-        console.log(
-          'JWT expires at:',
-          new Date(data.jwt.expires_at * 1000).toLocaleString()
-        );
       } else if (data.token) {
         setJwt(data.token);
       } else {
@@ -62,7 +52,7 @@ export default function Home() {
     }
   };
 
-  const handlePaymentSuccess = () => {
+  const handlePaymentSuccess = (): void => {
     alert('Payment completed successfully!');
     // You can add additional logic here, such as redirecting to a success page
   };

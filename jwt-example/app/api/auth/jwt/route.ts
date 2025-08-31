@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
-export async function POST(request: NextRequest) {
+export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
     const { apiKey, duration = 86400 } = await request.json();
 
@@ -49,7 +49,6 @@ export async function POST(request: NextRequest) {
       }
     );
 
-    console.log('Value.io JWT Response:', response.data);
     return NextResponse.json(response.data);
   } catch (error) {
     console.error('JWT creation error:', error);
