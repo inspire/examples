@@ -77,13 +77,6 @@ VALUE_IO_API_KEY=your_api_key
 VALUE_IO_BASE_URL=https://api.value.io/v1
 ```
 
-## 📚 Documentation
-
-### AI Documentation (`ai_docs/`)
-Contains planning documents and technical specifications:
-- JWT implementation cleanup plans
-- Linting configuration guides
-- Destination filtering strategies
 
 ## 🛠 Technology Stack
 
