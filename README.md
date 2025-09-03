@@ -25,6 +25,11 @@ npm run dev
 ### 2. Payment Reports Dashboard (`reports/`)
 A production-ready payment reporting dashboard for Value.io merchants with advanced analytics and data management.
 
+
+![Kapture 2025-09-03 at 10 18 29](https://github.com/user-attachments/assets/84b6e95a-11e8-4bc9-9ffd-0a8472ebd21c)
+
+
+
 **Key Features:**
 - Real-time payment batch management and transaction tracking
 - Advanced filtering, search, and data export capabilities
