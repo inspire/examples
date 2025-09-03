@@ -1,4 +1,4 @@
-# Spry Examples
+# Value.IO / Inspire Commerce Examples
 
 This repository contains example applications demonstrating Value.io payment integration patterns and best practices. Each example showcases different aspects of the Value.io API and payment processing capabilities.
 
