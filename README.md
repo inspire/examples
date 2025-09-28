@@ -1,4 +1,4 @@
-# Spry Examples
+# Value.IO / Inspire Commerce Examples
 
 This repository contains example applications demonstrating Value.io payment integration patterns and best practices. Each example showcases different aspects of the Value.io API and payment processing capabilities.
 
@@ -24,6 +24,11 @@ npm run dev
 
 ### 2. Payment Reports Dashboard (`reports/`)
 A production-ready payment reporting dashboard for Value.io merchants with advanced analytics and data management.
+
+
+![Kapture 2025-09-03 at 10 18 29](https://github.com/user-attachments/assets/84b6e95a-11e8-4bc9-9ffd-0a8472ebd21c)
+
+
 
 **Key Features:**
 - Real-time payment batch management and transaction tracking
@@ -72,13 +77,6 @@ VALUE_IO_API_KEY=your_api_key
 VALUE_IO_BASE_URL=https://api.value.io/v1
 ```
 
-## 📚 Documentation
-
-### AI Documentation (`ai_docs/`)
-Contains planning documents and technical specifications:
-- JWT implementation cleanup plans
-- Linting configuration guides
-- Destination filtering strategies
 
 ## 🛠 Technology Stack
 
