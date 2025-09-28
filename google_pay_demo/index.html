@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script async src="https://pay.google.com/gp/p/js/pay.js"></script>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .google-pay-button {
+      background-color: #000;
+      border-radius: 4px;
+      padding: 12px 24px;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .google-pay-button:hover {
+      background-color: #333;
+    }
+
+    .google-pay-button img {
+      height: 24px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="text-center py-4 w-full">
+    <h1 class="text-2xl font-bold">Value.IO Google Pay Demo App</h1>
+  </header>
+
+  <div class="p-6 w-full max-w-xl mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+    <form class="w-full">
+      <div class="mb-4 w-full">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+        <input
+          class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="username" type="text" />
+      </div>
+      <div class="mb-4 w-full">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">API Key</label>
+        <input
+          class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="password" type="password" />
+      </div>
+      <div class="mb-4 w-full">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="base_url">Base URL</label>
+        <input
+          class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="base_url" type="text" />
+      </div>
+
+      <div class="mb-4 w-full">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="destination">Destination</label>
+        <input
+          class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="destination" type="text" />
+      </div>
+
+      <div class="mb-4 w-full">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="display_name">Display Name</label>
+        <input
+          class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="display_name" type="text" value="Merchant Name Goes Here" />
+      </div>
+
+
+      <div class="mb-4 w-full">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="google_pay_merchant_id">Google Pay Merchant ID</label>
+        <input
+          class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="google_pay_merchant_id" type="text" value="" placeholder="Your Google Pay Merchant ID" />
+      </div>
+
+      <div class="mb-4 w-full">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="psp_gateway">PSP Gateway</label>
+        <input
+          class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="psp_gateway" type="text" value="inspirecommerce" placeholder="Payment Service Provider Gateway ID" />
+      </div>
+
+      <div class="mb-4 w-full">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="amount">Amount</label>
+        <input
+          class="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="amount" type="text" value="10.00" />
+      </div>
+      <!-- Checkbod for test transaction -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="test_transaction">Test Transaction</label>
+        <select class="py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="test_transaction">
+          <option value="true" selected>True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+
+      <div class="flex items-center justify-end" id="ckoGooglePay">
+      </div>
+      <div id="alert-toast"
+        class="right-0 m-6 p-4 text-white rounded-lg shadow-lg opacity-0 transition-opacity duration-500 ease-in-out">
+        <p id="alert-message">This is an alert message.</p>
+      </div>
+    </form>
+  </div>
+
+  <!-- Adding an error message to show in case Google Pay is not possible -->
+  <p style="display: none" id="ckoGooglePayError" class="text-red-500 text-center mt-4">
+    GooglePay is not available in this environment.
+  </p>
+
+  <script src="page.js"></script>
+  <script src="valueio.js"></script>
+</body>
+
+</html>File updated at Fri Sep 19 20:43:46 MDT 2025
