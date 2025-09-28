@@ -89,7 +89,7 @@ VALUE_IO_API_KEY=your_api_key
 VALUE_IO_BASE_URL=https://api.value.io/v1
 
 # Or use staging environment for testing
-# VALUE_IO_BASE_URL=https://api-staging.value.io/v1
+# VALUE_IO_BASE_URL=https://api.value.io/v1
 ```
 
 > **Security Note**: Never commit `.env.local` to version control. The `.gitignore` file is configured to exclude it.

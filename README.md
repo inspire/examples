@@ -67,7 +67,7 @@ Each example uses environment variables for API configuration. Create a `.env.lo
 
 ```env
 # For JWT Example
-NEXT_PUBLIC_VIO_API_URL=https://api-staging.value.io/
+NEXT_PUBLIC_VIO_API_URL=https://api.value.io/
 NEXT_PUBLIC_VIO_WRITE_ONLY_TOKEN=your-write-only-token
 VIO_ADMIN_KEY=your-admin-key
 

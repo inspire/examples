@@ -21,7 +21,7 @@ npm install
 2. Configure environment variables in `.env.local`:
 ```env
 # Value.io API Configuration
-NEXT_PUBLIC_VIO_API_URL=https://api-staging.value.io/
+NEXT_PUBLIC_VIO_API_URL=https://api.value.io/
 NEXT_PUBLIC_VIO_WRITE_ONLY_TOKEN=your-write-only-token
 NEXT_PUBLIC_VIO_ACCOUNT=your-account
 NEXT_PUBLIC_VIO_DESTINATION_ID=your-destination-id
