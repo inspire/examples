@@ -73,8 +73,42 @@ Before running in production:
 - Ensure all API keys and credentials are properly set
 - Test thoroughly in TEST environment first
 
+## Google Pay Button Brand Guidelines
+
+When implementing Google Pay, it's crucial to follow Google's brand guidelines to ensure approval and maintain consistency with the Google Pay brand standards.
+
+### Important Requirements
+- The Google Pay button must align with approved standards
+- Review and adjust your implementation according to platform-specific guidelines:
+  - **Web Integration:** [Google Pay Web Brand Guidelines](https://developers.google.com/pay/api/web/guides/brand-guidelines#payment-buttons)
+  - **Android Integration:** [Google Pay Android Brand Guidelines](https://developers.google.com/pay/api/android/guides/brand-guidelines#payment-buttons)
+
+### Purchase Flow Documentation
+
+When submitting your integration for review, you'll need to provide screenshots of your complete purchase flow:
+
+1. **Required Screenshots:**
+   - Initial product/service selection page
+   - Cart or order summary page
+   - Google Pay button placement and appearance
+   - Payment confirmation screen
+   - Order completion/thank you page
+
+2. **Screenshot Guidelines:**
+   - Capture the entire user journey from selection to completion
+   - Ensure the Google Pay button is clearly visible and properly styled
+   - Include both desktop and mobile views if applicable
+   - Highlight any unique aspects of your implementation
+
+3. **Review Process:**
+   - Upload screenshots to the Google Pay Business Console
+   - Ensure your button implementation matches the brand guidelines exactly
+   - Be prepared to make adjustments based on Google's feedback
+
 ## Additional Resources
 
 - [Google Pay API Documentation](https://developers.google.com/pay/api/web/guides/setup)
 - [Google Pay Business Support](https://support.google.com/pay/business/)
 - [Integration Testing Guide](https://developers.google.com/pay/api/web/guides/test-and-deploy)
+- [Brand Guidelines - Web](https://developers.google.com/pay/api/web/guides/brand-guidelines#payment-buttons)
+- [Brand Guidelines - Android](https://developers.google.com/pay/api/android/guides/brand-guidelines#payment-buttons)
