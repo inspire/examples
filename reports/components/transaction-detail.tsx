@@ -67,7 +67,6 @@ export function TransactionDetail({ batch, onBack }: TransactionDetailProps) {
   const [error, setError] = useState<string | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(0)
-  const [hasMore, setHasMore] = useState(false)
   const [showFilters, setShowFilters] = useState(false)
   const itemsPerPage = 10
   const { toast } = useToast()
@@ -100,7 +99,7 @@ export function TransactionDetail({ batch, onBack }: TransactionDetailProps) {
         transaction.invoice_number || '',
         transaction.gateway_transaction_id || '',
         transaction.gross_amount?.toFixed(2) || '0.00',
-        transaction.fees?.toFixed(2) || '0.00',
+        '0.00', // fees field not available in API
         transaction.net_amount?.toFixed(2) || '0.00',
         transaction.settlement_currency || 'USD',
         transaction.transaction_type.startsWith('+') ? 'Credit' : 'Debit'
@@ -203,7 +202,6 @@ export function TransactionDetail({ batch, onBack }: TransactionDetailProps) {
       
       const data: TransactionListResponse = await response.json()
       setTransactions(data.transactions)
-      setHasMore(data.hasMore)
       setTotalPages(Math.ceil(data.total / data.pageSize))
     } catch (err) {
       console.error('Failed to fetch transactions:', err)
