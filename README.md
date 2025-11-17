@@ -22,7 +22,28 @@ npm install
 npm run dev
 ```
 
-### 2. Google Pay Demo (`google_pay_demo/`)
+### 2. Apple Pay Demo (`apple_pay_demo/`)
+A comprehensive demonstration of Apple Pay integration with Value.IO backend services, showcasing production-ready payment processing with merchant identity certificates.
+
+**Key Features:**
+- Complete Apple Pay Web API integration with Value.IO payment gateway
+- SSL/HTTPS domain verification support
+- Merchant Identity Certificate setup and configuration
+- Payment certificate generation and management
+- Local development and testing capabilities with ngrok
+
+**Use Case:** When you need to accept Apple Pay payments through Value.IO's payment processing infrastructure with proper merchant certificate authentication.
+
+**Get Started:**
+```bash
+cd apple_pay_demo
+# Follow README for merchant certificate setup and domain verification
+cd server && bundle exec ruby server.rb
+```
+
+**Note:** Production usage requires an Apple Pay merchant account, SSL/HTTPS connection, and domain verification. Merchant identity and payment certificates must be properly configured.
+
+### 3. Google Pay Demo (`google_pay_demo/`)
 A comprehensive demonstration of Google Pay integration with Value.IO backend services, showcasing production-ready payment processing.
 
 **Key Features:**
@@ -44,7 +65,7 @@ cd google_pay_demo
 
 **Note:** Production usage requires a Google Pay merchant account. See the [Google Pay Business Console](https://pay.google.com/business/console/) for setup.
 
-### 3. Payment Reports Dashboard (`reports/`)
+### 4. Payment Reports Dashboard (`reports/`)
 A production-ready payment reporting dashboard for Value.io merchants with advanced analytics and data management.
 
 ![Kapture 2025-09-03 at 10 18 29](https://github.com/user-attachments/assets/84b6e95a-11e8-4bc9-9ffd-0a8472ebd21c)
@@ -71,6 +92,7 @@ npm run dev
 
 1. **Choose an example** based on your integration needs:
    - **JWT Authentication** - For secure tokenized payment forms
+   - **Apple Pay Demo** - For Apple Pay payment acceptance with merchant certificates
    - **Google Pay Demo** - For Google Pay payment acceptance
    - **Reports Dashboard** - For payment analytics and management
 2. **Navigate to the example directory** and follow its specific README
@@ -113,9 +135,10 @@ All examples are built with modern web technologies:
 ## 📖 Learning Path
 
 1. **Start with JWT Example** if you're new to Value.io integration
-2. **Try the Google Pay Demo** to understand payment gateway integration
-3. **Explore the Reports Dashboard** for advanced API usage patterns
-4. **Review the AI documentation** for architectural decisions and best practices
+2. **Try the Apple Pay Demo** to understand Apple Pay merchant certificate setup and integration
+3. **Try the Google Pay Demo** to understand Google Pay payment gateway integration
+4. **Explore the Reports Dashboard** for advanced API usage patterns
+5. **Review the AI documentation** for architectural decisions and best practices
 
 ## 🤝 Support
 
